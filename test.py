@@ -9,6 +9,9 @@ import sys
 args = sys.argv
 # models/RRDB_ESRGAN_x4.pth OR models/RRDB_PSNR_x4.pth
 model_path = 'models/RRDB_ESRGAN_x4.pth'
+if len(args > 3):
+    model_path = 'models/RRDB_PSNR_x4.pth'
+print(model_path)
 # if you want to run on CPU, change 'cuda' -> cpu
 device = torch.device('cuda')
 # device = torch.device('cpu')
